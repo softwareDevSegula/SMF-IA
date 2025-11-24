@@ -1,0 +1,6 @@
+# config/database.yaml — DEVELOPMENT MODE (root)
+host: localhost
+port: 3306
+user: root
+password: "123456789"
+database: mbse_project

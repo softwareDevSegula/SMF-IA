@@ -1,0 +1,11 @@
+pandas
+openpyxl
+mariadb
+pyyaml
+python-docx
+jinja2
+plotly
+kaleido
+graphviz
+networkx
+matplotlib
