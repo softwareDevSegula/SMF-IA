@@ -35,3 +35,6 @@ conn.commit()
 conn.close()
 print("SUCCESS! Database is 100% clean with multi-subsystem support")
 print("NOW RUN: python parser_excel_to_mariadb.py")
+
+
+### END OF FILE
