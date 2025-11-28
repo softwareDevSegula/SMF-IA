@@ -1,0 +1,322 @@
+// System Context Diagram
+digraph MBSE_Context_Diagram {
+	graph [bgcolor=white concentrate=false dpi=400 nodesep=11.0 pad=3.0 rankdir=LR ranksep=11.0 sep="+50" splines=ortho]
+	node [fillcolor="#E0E0E0" fontname=Arial margin="0.6,0.4" shape=box style=filled]
+	subgraph cluster_CHASSIS {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label=CHASSIS margin=50 penwidth=2.5 style="filled,rounded"]
+		"CHASSIS BLACK BOX" [label="CHASSIS BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_SUPERVISION {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label=SUPERVISION margin=50 penwidth=2.5 style="filled,rounded"]
+		FCT_Manage_Vehicle_OTA_Mode [label="MANAGE VEHICLE OTA MODE" fixedsize=true fontsize=11 height=8.0 margin="1.0,0.6" width=15.0]
+		Fct_Manage_CarWash [label="MANAGE CARWASH" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Safety_FOTA_Master [label="MANAGE SAFETY FOTA MASTER" fixedsize=true fontsize=11 height=6.8 margin="1.0,0.6" width=15.0]
+		FCT_Manage_Service_Restriction [label="MANAGE SERVICE RESTRICTION" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Ignition_Working_Condition [label="MANAGE IGNITION WORKING CONDITION" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Vehicle_State [label="MANAGE VEHICLE STATE" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_HPC_MCU_CONFIGURATION_INSTALLATION [label="MANAGE HPC MCU CONFIGURATION INSTALLATION" fixedsize=true fontsize=11 height=8.0 margin="1.0,0.6" width=15.0]
+		FCT_Manage_Ignition_Position_Status [label="MANAGE IGNITION POSITION STATUS" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_ZCU_CL_CONFIGURATION_INSTALLATION [label="MANAGE ZCU CL CONFIGURATION INSTALLATION" fixedsize=true fontsize=11 height=8.0 margin="1.0,0.6" width=15.0]
+		Fct_Manage_CarWash_Availability [label="MANAGE CARWASH AVAILABILITY" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Comfort_Enable [label="MANAGE COMFORT ENABLE" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Remote_Requests [label="MANAGE REMOTE REQUESTS" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Remote_Requests_Arbitration [label="MANAGE REMOTE REQUESTS ARBITRATION" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_Manage_Safety_FOTA_Inhibitor [label="MANAGE SAFETY FOTA INHIBITOR" fixedsize=true fontsize=11 height=6.0 margin="1.0,0.6" width=13.6]
+		EI_SRM_ZCU_CL_Error_Comm [label="EI SRM ZCU CL ERROR COMM" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		EI_SRM_HPC_MCU_Error_Comm [label="EI SRM HPC MCU ERROR COMM" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		Fct_Manage_Alarm_Status [label="MANAGE ALARM STATUS" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_MAINTENANCE_SYSTEM {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label="MAINTENANCE SYSTEM" margin=50 penwidth=2.5 style="filled,rounded"]
+		"MAINTENANCE SYSTEM BLACK BOX" [label="MAINTENANCE SYSTEM BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_CONNECTIVITY {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label=CONNECTIVITY margin=50 penwidth=2.5 style="filled,rounded"]
+		"CONNECTIVITY BLACK BOX" [label="CONNECTIVITY BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_CARBODY_ACCESS {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label="CARBODY ACCESS" margin=50 penwidth=2.5 style="filled,rounded"]
+		"CARBODY ACCESS BLACK BOX" [label="CARBODY ACCESS BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_CARBODY_VISIBILITY {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label="CARBODY VISIBILITY" margin=50 penwidth=2.5 style="filled,rounded"]
+		"CARBODY VISIBILITY BLACK BOX" [label="CARBODY VISIBILITY BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		CARBODY_VISIBILITY [label="CARBODY VISIBILITY" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_External_RVM [label="MANAGE EXTERNAL RVM" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_Front_and_Rear_Wiping_And_Washing [label="MANAGE FRONT AND REAR WIPING AND WASHING" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_Highbeam [label="MANAGE HIGHBEAM" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_Sound_Warning [label="MANAGE SOUND WARNING" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_SUPERVISE_Animations [label="SUPERVISE ANIMATIONS" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_SUPERVISE_Presence_Signaling [label="SUPERVISE PRESENCE SIGNALING" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_SUPERVISE_Turn_Indicators_Priority [label="SUPERVISE TURN INDICATORS PRIORITY" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_ENERGIES_POWERTRAIN {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label="ENERGIES POWERTRAIN" margin=50 penwidth=2.5 style="filled,rounded"]
+		"ENERGIES POWERTRAIN BLACK BOX" [label="ENERGIES POWERTRAIN BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_HMI {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label=HMI margin=50 penwidth=2.5 style="filled,rounded"]
+		"HMI BLACK BOX" [label="HMI BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_DISPLAY_OTA [label="DISPLAY OTA" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		STLA_HMI [label="STLA HMI" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+		FCT_MANAGE_OTA [label="MANAGE OTA" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	subgraph cluster_DRIVING_ASSISTANCE {
+		graph [color="#1E88E5" dpi=400 fillcolor="#E3F2FD" fontname="Arial Bold" fontsize=16 label="DRIVING ASSISTANCE" margin=50 penwidth=2.5 style="filled,rounded"]
+		"DRIVING ASSISTANCE BLACK BOX" [label="DRIVING ASSISTANCE BLACK BOX" fixedsize=true fontsize=11 height=2.0 margin="1.0,0.6" width=4.0]
+	}
+	edge [arrowhead=vee color="#D32F2F" fontname=Arial fontsize=10 penwidth=2.5]
+	"ENERGIES POWERTRAIN BLACK BOX" -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • BatteryThermalRunawayAlert
+  • HV_FOTA_Conflict
+  • PropulsionSystemActive"]
+	Fct_Manage_CarWash -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • CarWashActivationStatus"]
+	"MAINTENANCE SYSTEM BLACK BOX" -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • DIAG_REQ_OTAActiveUpdateType
+  • DIAG_REQ_OTAUpdateType"]
+	FCT_Manage_Safety_FOTA_Master -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • FOTAInstallationStatus
+  • FOTAMasterReadyState"]
+	"CARBODY VISIBILITY BLACK BOX" -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • ParkingLightsStatus
+  • TrailerConnectionSts
+  • TurnSignalSts"]
+	"CONNECTIVITY BLACK BOX" -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • PrivateEcallAndAssitCallStatus
+  • RegulatoryEcallStatus
+  • VehUpdateStatus"]
+	FCT_Manage_Service_Restriction -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • ServiceRestrictionActivation"]
+	FCT_Manage_Ignition_Working_Condition -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleIgnitionStatus"]
+	"CHASSIS BLACK BOX" -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleLongSpeedComputedValue
+  • VehicleSecurementState"]
+	FCT_Manage_Vehicle_State -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleModeConfiguration"]
+	"CARBODY ACCESS BLACK BOX" -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • WindowsSts"]
+	FCT_Manage_Safety_FOTA_Master -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • FOTAMasterReadyState"]
+	"ENERGIES POWERTRAIN BLACK BOX" -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • HV_Charging_ChargeSystemSts
+  • PRNDEngagedState"]
+	EI_SRM_ZCU_CL_Error_Comm -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • PRNDEngagedStateErrorCom
+  • VehicleLongSpeedComputedValueErrorCom"]
+	"CHASSIS BLACK BOX" -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleLongSpeedComputedValue"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleOTAMode"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • FOTAInhibitorReadyState"]
+	EI_SRM_HPC_MCU_Error_Comm -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • FOTAInhibitorReadyStateErrorCom
+  • PropulsionSystemActiveErrorCom
+  • VehicleSecurementStateErrorCom"]
+	"ENERGIES POWERTRAIN BLACK BOX" -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • HV_Charging_ChargeSystemSts
+  • PropulsionSystemActive"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleOTAMode"]
+	"CHASSIS BLACK BOX" -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • VehicleSecurementState"]
+	"CONNECTIVITY BLACK BOX" -> FCT_MANAGE_ZCU_CL_CONFIGURATION_INSTALLATION [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • ClearDTCReq
+  • TesterPresent
+  • VehUpdateStatus
+  • ZCU_CL_HardResetReq
+  • ZCU_CL_OpenExtendedSessionReq
+  • ZCU_CL_OpenProgSessionReq
+  • ZCU_CL_RCCheckMemoryReq
+  • ZCU_CL_RCCopyMemoryReq
+  • ZCU_CL_RCEraseMemoryReq
+  • ZCU_CL_ReadActiveDiagSessionReq
+  • ZCU_CL_ReadProgrammingFlagsReq
+  • ZCU_CL_RequestChallengeReq
+  • ZCU_CL_RequestDownloadReq
+  • ZCU_CL_ResetSaveDataReq
+  • ZCU_CL_SendSignedChallengeReq
+  • ZCU_CL_TransferDataReq
+  • ZCU_CL_TransferExitReq
+  • ZCU_CL_WriteTgtCSIdentifierReq
+  • ZCU_CL_WriteTgtFingerprintReq
+  • ZCU_CL_WriteTgtSignaturesReq
+  • ZCU_CL_WriteTraceabilityReq"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_ZCU_CL_CONFIGURATION_INSTALLATION [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • OTAUpdateType
+  • VehicleOTAMode"]
+	"CONNECTIVITY BLACK BOX" -> FCT_MANAGE_HPC_MCU_CONFIGURATION_INSTALLATION [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • ClearDTCReq
+  • HPC_MCU_HardResetReq
+  • HPC_MCU_OpenExtendedSessionReq
+  • HPC_MCU_OpenProgSessionReq
+  • HPC_MCU_RCCheckMemoryReq
+  • HPC_MCU_RCCopyMemoryReq
+  • HPC_MCU_RCEraseMemoryReq
+  • HPC_MCU_RCRollbackSwitchBankReq
+  • HPC_MCU_ReadActiveDiagSessionReq
+  • HPC_MCU_ReadProgrammingFlagsReq
+  • HPC_MCU_RequestChallengeReq
+  • HPC_MCU_RequestDownloadReq
+  • HPC_MCU_ResetSaveDataReq
+  • HPC_MCU_SendSignedChallengeReq
+  • HPC_MCU_TransferDataReq
+  • HPC_MCU_TransferExitReq
+  • HPC_MCU_WriteTgtCSIdentifierReq
+  • HPC_MCU_WriteTgtFingerprintReq
+  • HPC_MCU_WriteTgtSignaturesReq
+  • HPC_MCU_WriteTraceabilityReq
+  • TesterPresent"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_HPC_MCU_CONFIGURATION_INSTALLATION [labelfontcolor="#D32F2F" labelfontsize=10 minlen=6 weight=1 xlabel="📥 CONSUMED:
+  • OTAUpdateType
+  • VehicleOTAMode"]
+	edge [arrowhead=vee color="#388E3C" fontname=Arial fontsize=10 penwidth=2.5]
+	FCT_Manage_Vehicle_OTA_Mode -> "MAINTENANCE SYSTEM BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • DIAG_RES_OTAActiveUpdateType"]
+	FCT_Manage_Vehicle_OTA_Mode -> "CONNECTIVITY BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehOTAUpdateInhibitState
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> "DRIVING ASSISTANCE BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> "ENERGIES POWERTRAIN BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType"]
+	FCT_Manage_Vehicle_OTA_Mode -> "HMI BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehOTAUpdateInhibitState"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_DISPLAY_OTA [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehOTAUpdateInhibitState
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> STLA_HMI [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehOTAUpdateInhibitState
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_HPC_MCU_CONFIGURATION_INSTALLATION [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Ignition_Position_Status [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_ZCU_CL_CONFIGURATION_INSTALLATION [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • OTAUpdateType
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> CARBODY_VISIBILITY [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_External_RVM [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_Front_and_Rear_Wiping_And_Washing [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_Highbeam [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_MANAGE_Sound_Warning [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_SUPERVISE_Animations [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_SUPERVISE_Presence_Signaling [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_SUPERVISE_Turn_Indicators_Priority [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> "CARBODY VISIBILITY BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> Fct_Manage_CarWash_Availability [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Comfort_Enable [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Remote_Requests [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Remote_Requests_Arbitration [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Vehicle_OTA_Mode -> FCT_Manage_Service_Restriction [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • VehicleOTAMode"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> "HMI BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAIgnitionLock"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> FCT_DISPLAY_OTA [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAIgnitionLock"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> STLA_HMI [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAIgnitionLock"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> FCT_Manage_Ignition_Position_Status [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAIgnitionLock"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> EI_SRM_HPC_MCU_Error_Comm [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAInhibitorReadyState"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> FCT_Manage_Safety_FOTA_Master [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAInhibitorReadyState"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> "CONNECTIVITY BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTASafeState"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> "DRIVING ASSISTANCE BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTASafeState"]
+	FCT_Manage_Safety_FOTA_Inhibitor -> "ENERGIES POWERTRAIN BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTASafeState"]
+	FCT_Manage_Safety_FOTA_Master -> "HMI BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTADaysExpirationCountdown
+  • FOTARollbackFailure"]
+	FCT_Manage_Safety_FOTA_Master -> FCT_MANAGE_OTA [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTADaysExpirationCountdown"]
+	FCT_Manage_Safety_FOTA_Master -> STLA_HMI [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTADaysExpirationCountdown
+  • FOTARollbackFailure"]
+	FCT_Manage_Safety_FOTA_Master -> "CONNECTIVITY BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAInstallationStatus
+  • FOTAMasterReadyState"]
+	FCT_Manage_Safety_FOTA_Master -> FCT_Manage_Vehicle_OTA_Mode [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAInstallationStatus
+  • FOTAMasterReadyState"]
+	FCT_Manage_Safety_FOTA_Master -> FCT_Manage_Safety_FOTA_Inhibitor [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTAMasterReadyState"]
+	FCT_Manage_Safety_FOTA_Master -> FCT_DISPLAY_OTA [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • FOTARollbackFailure"]
+	FCT_MANAGE_ZCU_CL_CONFIGURATION_INSTALLATION -> "CONNECTIVITY BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • ZCU_CL_ClearDTCRes
+  • ZCU_CL_HardResetRes
+  • ZCU_CL_OpenExtSessionRes
+  • ZCU_CL_OpenProgSessionRes
+  • ZCU_CL_RCCheckMemoryRes
+  • ZCU_CL_RCCopyMemoryRes
+  • ZCU_CL_RCEraseMemoryRes
+  • ZCU_CL_ReadActiveDiagSessionRes
+  • ZCU_CL_ReadProgrammingFlagsRes
+  • ZCU_CL_RequestChallengeRes
+  • ZCU_CL_RequestDownloadRes
+  • ZCU_CL_ResetSaveDataRes
+  • ZCU_CL_SendSignedChallengeRes
+  • ZCU_CL_TransferDataRes
+  • ZCU_CL_TransferExitRes
+  • ZCU_CL_WriteTgtCSIdentifierRes
+  • ZCU_CL_WriteTgtFingerprintRes
+  • ZCU_CL_WriteTgtSignaturesRes
+  • ZCU_CL_WriteTraceabilityRes"]
+	FCT_MANAGE_ZCU_CL_CONFIGURATION_INSTALLATION -> Fct_Manage_Alarm_Status [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • ZCU_CL_FailDeactivation"]
+	FCT_MANAGE_HPC_MCU_CONFIGURATION_INSTALLATION -> "CONNECTIVITY BLACK BOX" [labelfontcolor="#388E3C" labelfontsize=10 minlen=6 weight=2 xlabel="📤 EMITTED:
+  • HPC_MCU_ClearDTCRes
+  • HPC_MCU_HardResetRes
+  • HPC_MCU_OpenExtSessionRes
+  • HPC_MCU_OpenProgSessionRes
+  • HPC_MCU_RCCheckMemoryRes
+  • HPC_MCU_RCCopyMemoryRes
+  • HPC_MCU_RCEraseMemoryRes
+  • HPC_MCU_RCRollbackSwitchBankRes
+  • HPC_MCU_ReadActiveDiagSessionRes
+  • HPC_MCU_ReadProgrammingFlagsRes
+  • HPC_MCU_RequestChallengeRes
+  • HPC_MCU_RequestDownloadRes
+  • HPC_MCU_ResetSaveDataRes
+  • HPC_MCU_SendSignedChallengeRes
+  • HPC_MCU_TransferDataRes
+  • HPC_MCU_TransferExitRes
+  • HPC_MCU_WriteTgtCSIdentifierRes
+  • HPC_MCU_WriteTgtFingerprintRes
+  • HPC_MCU_WriteTgtSignaturesRes
+  • HPC_MCU_WriteTraceabilityRes"]
+	subgraph cluster_legend {
+		fillcolor="#FFFDE7" fontname="Arial Bold" fontsize=12 label=LEGEND style=filled
+		legend_consumption [label="Consumption Flow" fontcolor="#D32F2F" fontsize=10 shape=plaintext]
+		legend_emission [label="Emission Flow" fontcolor="#388E3C" fontsize=10 shape=plaintext]
+	}
+}
